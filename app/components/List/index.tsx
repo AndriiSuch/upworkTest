@@ -13,9 +13,11 @@ export const List: FC<IList> = ({options}) => {
   const [_, setCurrentSectionIndex] = useState(0);
 
   const onScroll = useCallback(({viewableItems}: any) => {
-    console.log(viewableItems, 'viewableItemsviewableItems');
     if (viewableItems?.length === 1) {
       setCurrentSectionIndex(viewableItems[0].index);
+    }else{
+      console.log('viewableItems');
+      
     }
   }, []);
 
